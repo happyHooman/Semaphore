@@ -19,3 +19,12 @@ function lightOff(color){
         case 'red': light.style.backgroundColor = "#300000";
     }
 }
+
+function startLights(){
+    lightOn('red');
+    setTimeout(lightOff('red'), 5000);
+    lightOn('yellow');
+    setTimeout(lightOff('yellow'), 3000);
+    lightOn('green');
+    setTimeout(lightOff('green'), 5000);
+}
