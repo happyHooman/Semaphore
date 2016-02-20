@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html>
-<body>
+<body onload="startLights()">
 
 <head>
     <title>Traffic light example</title>
     <link type="text/css" rel="stylesheet"
           href="style.css"/>
 </head>
-<button onclick="startLights()">START!</button>
 
 <div class="semaphore">
 
-    <div class="color" id="red-light" onmouseover="lightOn('red')" onmouseout="lightOff('red')">
+    <div class="color" id="red-light">
 
     </div>
 
-    <div class="color" id="yellow-light" onmouseover="lightOn('yellow')" onmouseout="lightOff('yellow')">
+    <div class="color" id="yellow-light">
 
     </div>
 
-    <div class="color" id="green-light" onmouseover="lightOn('green')" onmouseout="lightOff('green')">
+    <div class="color" id="green-light">
 
     </div>
 </div> <!-- end semaphore -->

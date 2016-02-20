@@ -23,9 +23,7 @@ function lightOff(color){
 function startLights(){
     lightOn('red');
     setTimeout(function(){lightOff('red'); lightOn('yellow');},1000);
-
     setTimeout(function(){lightOff('yellow'); lightOn('green');},2000);
-
     setTimeout(function(){lightOff('green')},3000);
     setTimeout(startLights, 3000);
 }
