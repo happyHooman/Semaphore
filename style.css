@@ -1,16 +1,19 @@
 .semaphore {
     border: solid black 1px;
     width: 120px;
-    margin: 200px auto auto;
+    margin: 150px auto auto;
     height: 340px;
     background-color: black;
-    padding-top: 5px;
+    border-radius: 20px;
 }
 
 .color {
     width: 100px;
     margin: 10px;
     height: 100px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
 }
 
 #green-light {

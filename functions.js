@@ -27,3 +27,9 @@ function lightOffRed(){
     var light = document.getElementById("red-light");
     light.style.backgroundColor = "#300000";
 }
+
+function lightOn (color){
+    //var colorId = color + "-light";
+    var light = document.getElementById(color + "-light");
+    light.style.backgroundColor = "#00ff00";
+}
