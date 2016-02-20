@@ -1,7 +1,7 @@
 .semaphore {
     border: solid black 1px;
     width: 120px;
-    margin: auto;
+    margin: 200px auto auto;
     height: 340px;
     background-color: black;
     padding-top: 5px;
