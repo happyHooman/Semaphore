@@ -1,31 +1,29 @@
 <!DOCTYPE html>
 <html>
 <body>
-	
+
 <head>
     <title>Traffic light example</title>
     <link type="text/css" rel="stylesheet"
-        href="style.css"/>
+          href="style.css"/>
 </head>
 
 <div class="semaphore">
-    <div class="color" id="green-light" onmouseover="lightBrightGreen()" onmouseout="lightOffGreen()">
+    <div class="color" id="green-light" onmouseover="lightOnGreen()" onmouseout="lightOffGreen()">
 
     </div>
 
-    <div class="color" id="yellow-light" onmouseout="loghtOff()">
+    <div class="color" id="yellow-light" onmouseover="lightOnYellow()" onmouseout="lightOffYellow()">
 
     </div>
 
-    <div class="color" id="red-light">
+    <div class="color" id="red-light" onmouseover="lightOnRed()" onmouseout="lightOffRed()">
 
     </div>
 </div> <!-- end semaphore -->
 
-
-
 <script src="functions.js"
-    type="text/javascript">
+        type="text/javascript">
 </script>
 
 </body>
