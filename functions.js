@@ -1,3 +1,6 @@
+var redTimeOut = 10000;
+var greenTimeOut = 10000;
+
 function lightOn(color){
     var light = document.getElementById(color + "-light");
     switch (color) {
@@ -25,8 +28,8 @@ function lightOff(color){
 
 function startLights(){
     lightOn('red');
-    setTimeout(function(){lightOff('red'); lightOn('yellow');},1000);
-    setTimeout(function(){lightOff('yellow'); lightOn('green');},2000);
-    setTimeout(function(){lightOff('green')},3000);
-    setTimeout(startLights, 3000);
+    setTimeout(function(){lightOff('red'); lightOn('yellow');},redTimeOut);
+    setTimeout(function(){lightOff('yellow'); lightOn('green');},redTimeOut+3000);
+    setTimeout(function(){lightOff('green')},redTimeOut+greenTimeOut+3000);
+    setTimeout(startLights, redTimeOut+greenTimeOut+3000);
 }
