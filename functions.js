@@ -20,6 +20,9 @@ function lightOff(color){
     }
 }
 
+//TODO no info about colors in js
+//TODO add classes ON and OFF
+
 function startLights(){
     lightOn('red');
     setTimeout(function(){lightOff('red'); lightOn('yellow');},1000);
