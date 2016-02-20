@@ -1,0 +1,26 @@
+.semaphore {
+    border: solid black 1px;
+    width: 120px;
+    margin: auto;
+    height: 340px;
+    background-color: black;
+    padding-top: 5px;
+}
+
+.color {
+    width: 100px;
+    margin: 10px;
+    height: 100px;
+}
+
+#green-light {
+    background-color: #002000;
+}
+
+#yellow-light {
+    background-color: #202000;
+}
+
+#red-light {
+    background-color: #200000;
+}
