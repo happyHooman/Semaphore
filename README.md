@@ -8,4 +8,4 @@ Preview it [here](https://rawgit.com/happyHooman/Semaphore/master/index.html)
  - [ ] add seconds to green and red to see how much time is left
  - [ ] viewport to make it visible on mobile phones
  - [ ] user defined time for red and green lights
- - [ ] find all requirements for a semaphore
+ - [x] behaves like a real traffic light
