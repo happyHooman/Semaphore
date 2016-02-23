@@ -1,7 +1,7 @@
 var redTimeOut = 10;
 var greenTimeOut = 10;
 var needStop = false;
-var secMs = 1000;
+var secMs = 200;
 
 function lightOn(color) {
     var light = document.getElementById(color + "-light");
@@ -57,7 +57,11 @@ function intermitent(c) {
 function countdown(timer, color) {
     var p = document.getElementById(color + "-countdown");
 
-    p.innerHTML = timer;
+    if (timer > 9) {
+        p.innerHTML = timer;
+    } else {
+        p.innerHTML = '0' + timer
+    }
     if (timer != 0) {
         timer--;
         setTimeout(function () {
@@ -72,13 +76,6 @@ function countdown(timer, color) {
 //TODO add classes ON and OFF
 
 function startLights(step) {
-    /*
-     lightOn('red');
-     setTimeout(function(){lightOff('red'); lightOn('yellow');},redTimeOut);
-     setTimeout(function(){lightOff('yellow'); lightOn('green');},redTimeOut+3000);
-     setTimeout(function(){lightOff('green')},redTimeOut+greenTimeOut+3000);
-     setTimeout(startLights, redTimeOut+greenTimeOut+3000);
-     */
     console.debug('step', step);
     switch (step) {
         case 1:

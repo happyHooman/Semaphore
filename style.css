@@ -16,12 +16,23 @@
     border-radius: 50px;
 }
 
+@font-face {
+    font-family: digital-7;
+    src: url('asserts/fonts/digital-7/digital-7.ttf');
+}
+
+@font-face {
+    font-family: times-sqare;
+    src: url('asserts/fonts/Times_Square/TIMES_SQ.TTF');
+}
+
 .countdown {
     color: white;
     text-align: center;
     margin: 0;
-    font-size: 40px;
-    padding-top: 25px;
+    font-size: 80px;
+    padding-top: 7px;
+    font-family: times-sqare, sans-serif;
 }
 
 #green-light {
