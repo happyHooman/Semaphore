@@ -17,11 +17,6 @@
 }
 
 @font-face {
-    font-family: digital-7;
-    src: url('asserts/fonts/digital-7/digital-7.ttf');
-}
-
-@font-face {
     font-family: times-sqare;
     src: url('asserts/fonts/Times_Square/TIMES_SQ.TTF');
 }
@@ -32,7 +27,7 @@
     margin: 0;
     font-size: 80px;
     padding-top: 7px;
-    font-family: times-sqare, sans-serif;
+    font-family: times-sqare, Serif;
 }
 
 #green-light {
