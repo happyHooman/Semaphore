@@ -16,6 +16,14 @@
     border-radius: 50px;
 }
 
+.countdown {
+    color: white;
+    text-align: center;
+    margin: 0px;
+    font-size: 40px;
+    padding-top: 25px;
+}
+
 #green-light {
     background-color: #003000;
 }

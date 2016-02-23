@@ -24,11 +24,11 @@ function lightOff(color){
     }
 }
 
-function intermitent(step){
+function intermitent(c){
     if (needStop) {
-        step = 0;
+        c = 0;
     }
-    switch(step){
+    switch(c){
         case 1:
             lightOff('green');
             setTimeout(function(){
@@ -42,6 +42,18 @@ function intermitent(step){
         case 0:
             lightOff('green');
             break;
+    }
+}
+
+function countdown(timer, color){
+    var p = document.getElementById(color+"-countdown");
+
+    p.innerHTML = timer;
+    if(timer!=0){
+        timer--;
+        setTimeout(function(){countdown(timer, color)},1000)
+    } else {
+        p.innerHTML = '';
     }
 }
 
@@ -59,40 +71,44 @@ function startLights(step){
     switch(step){
         case 1:
             lightOn('red');
-            setTimeout(function(){
-                startLights(2)},redTimeOut);
+            countdown(redTimeOut/1000+3, 'red');
+            setTimeout(function() {
+                startLights(step)}, redTimeOut);
+            step++;
             break;
         case 2:
             lightOn('yellow');
             setTimeout(function(){
-                startLights(3)},3000);
+                startLights(step)},3000);
+            step++;
             break;
         case 3:
             lightOff('red');
             lightOff('yellow');
+            lightOn('green');
+            countdown(greenTimeOut/1000, 'green');
             setTimeout(function(){
-                startLights(4)},300);
+                startLights(step)},greenTimeOut-3000);
+            step++;
             break;
         case 4:
-            lightOn('green');
-            setTimeout(function(){
-                startLights(5)},greenTimeOut-3000);
-            break;
-        case 5:
             needStop=false;
             intermitent(1);
             setTimeout(function(){
-                startLights(6)},3000);
+                startLights(step)},3000);
+            step++;
             break;
-        case 6:
+        case 5:
             needStop=true;
             lightOn('yellow');
             setTimeout(function(){
-                startLights(7)},1000);
+                startLights(step)},1000);
+            step++;
             break;
-        case 7:
+        case 6:
             lightOff('yellow');
-            startLights(1);
+            step=1;
+            startLights(step);
             break;
     }
 }
