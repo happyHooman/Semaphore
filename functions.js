@@ -1,7 +1,7 @@
 var redTimeOut = 10;
 var greenTimeOut = 10;
 var needStop = false;
-var secMs = 200;
+var secMs = 300;
 
 function lightOn(color) {
     var light = document.getElementById(color + "-light");
