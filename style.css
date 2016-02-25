@@ -47,14 +47,14 @@
     background-color: #300000;
 }
 
-.red-on {
+.red.on {
     background-color: #ff0000;
 }
 
-.yellow-on {
+.yellow.on {
     background-color: #ffff00;
 }
 
-.green-on {
+.green.on {
     background-color: #00ff00;
 }
