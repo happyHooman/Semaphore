@@ -48,13 +48,13 @@
 }
 
 .red-on {
-    background-color: red;
+    background-color: #ff0000;
 }
 
 .yellow-on {
-    background-color: yellow;
+    background-color: #ffff00;
 }
 
 .green-on {
-    background-color: green;
+    background-color: #00ff00;
 }
