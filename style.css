@@ -8,6 +8,18 @@
     float: left;
 }
 
+.semaphore.horizontal {
+    width: 360px;
+    height: 120px;
+    display: flex;
+}
+
+.semaphore.small {
+    border: solid greenyellow 1px;
+    width: 12px;
+    height: 34px;
+    border-radius: 2px;
+}
 .container {
     border: solid blue 2px;
     margin: auto;
@@ -29,6 +41,18 @@
     line-height: 95px;
 }
 
+.color.small {
+    width: 10px;
+    margin: 1px;
+    height: 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+
+    font-size: 8px;
+    line-height: 9px;
+}
+
 @font-face {
     font-family: times-sqare;
     src: url('asserts/fonts/Times_Square/TIMES_SQ.TTF');
@@ -36,15 +60,15 @@
 
 
 .green {
-    background-color: #003000;
+    background-color: #005000;
 }
 
 .yellow {
-    background-color: #303000;
+    background-color: #505000;
 }
 
 .red {
-    background-color: #300000;
+    background-color: #500000;
 }
 
 .red.on {
