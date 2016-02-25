@@ -1,33 +1,33 @@
 var redTimeOut = 10;
 var greenTimeOut = 10;
 var needStop = false;
-var secMs = 300;
+var secMs = 200;
 
 function lightOn(color) {
-    var light = document.getElementById(color + "-light");
+    var light = document.getElementsByClassName(color);
     switch (color) {
         case 'green':
-            light.style.backgroundColor = "#00ff00";
+            light[0].style.backgroundColor = "#00ff00";
             break;
         case 'yellow':
-            light.style.backgroundColor = "#ffff00";
+            light[0].style.backgroundColor = "#ffff00";
             break;
         case 'red':
-            light.style.backgroundColor = "#ff0000";
+            light[0].style.backgroundColor = "#ff0000";
     }
 }
 
 function lightOff(color) {
-    var light = document.getElementById(color + "-light");
+    var light = document.getElementsByClassName(color);
     switch (color) {
         case 'green':
-            light.style.backgroundColor = "#003000";
+            light[0].style.backgroundColor = "#003000";
             break;
         case 'yellow':
-            light.style.backgroundColor = "#303000";
+            light[0].style.backgroundColor = "#303000";
             break;
         case 'red':
-            light.style.backgroundColor = "#300000";
+            light[0].style.backgroundColor = "#300000";
     }
 }
 
@@ -55,12 +55,12 @@ function intermitent(c) {
 }
 
 function countdown(timer, color) {
-    var p = document.getElementById(color + "-countdown");
+    var p = document.getElementsByClassName(color);
 
     if (timer > 9) {
-        p.innerHTML = timer;
+        p[0].innerHTML = timer;
     } else {
-        p.innerHTML = '0' + timer
+        p[0].innerHTML = '0' + timer
     }
     if (timer != 0) {
         timer--;
@@ -68,7 +68,7 @@ function countdown(timer, color) {
             countdown(timer, color)
         }, secMs)
     } else {
-        p.innerHTML = '';
+        p[0].innerHTML = '';
     }
 }
 
@@ -121,3 +121,5 @@ function startLights(step) {
             break;
     }
 }
+
+startLights(1);

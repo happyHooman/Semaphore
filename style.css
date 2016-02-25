@@ -1,10 +1,17 @@
 .semaphore {
-    border: solid black 1px;
+    border: solid greenyellow 2px;
     width: 120px;
-    margin: 150px auto auto;
+    margin: 10px;
     height: 340px;
     background-color: black;
     border-radius: 20px;
+    float: left;
+}
+
+.container {
+    border: solid blue 2px;
+    margin: auto;
+    display: inline-block;
 }
 
 .color {
@@ -14,6 +21,12 @@
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
     border-radius: 50px;
+
+    color: white;
+    text-align: center;
+    font-size: 80px;
+    font-family: times-sqare, Serif;
+    text-align-all: center;
 }
 
 @font-face {
@@ -21,23 +34,27 @@
     src: url('asserts/fonts/Times_Square/TIMES_SQ.TTF');
 }
 
-.countdown {
-    color: white;
-    text-align: center;
-    margin: 0;
-    font-size: 80px;
-    padding-top: 7px;
-    font-family: times-sqare, Serif;
-}
 
-#green-light {
+.green {
     background-color: #003000;
 }
 
-#yellow-light {
+.yellow {
     background-color: #303000;
 }
 
-#red-light {
+.red {
     background-color: #300000;
+}
+
+.red-on {
+    background-color: red;
+}
+
+.yellow-on {
+    background-color: yellow;
+}
+
+.green-on {
+    background-color: green;
 }

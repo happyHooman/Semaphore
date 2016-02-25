@@ -1,35 +1,30 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Traffic light example</title>
-    <link type="text/css" rel="stylesheet"
-          href="style.css"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
 
-<body onload="startLights(1)">
-<div class="semaphore">
+    <head>
+        <title>Traffic light example</title>
+        <link type="text/css" rel="stylesheet"
+              href="style.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
 
-    <div class="color" id="red-light">
-        <p class="countdown" id="red-countdown">
+    <body>
+    <div class="container">
+            <div class="semaphore">
+                <div class="color red"></div>
+                <div class="color yellow"></div>
+                <div class="color green"></div>
+            </div> <!-- end semaphore -->
 
-        </p>
+            <div class="semaphore">
+                <div class="color red-on"></div>
+                <div class="color yellow"></div>
+                <div class="color green"></div>
+            </div> <!-- end semaphore -->
     </div>
+        <script src="functions.js"
+                type="text/javascript">
+        </script>
 
-    <div class="color" id="yellow-light">
-
-    </div>
-
-    <div class="color" id="green-light">
-        <p class="countdown" id="green-countdown">
-
-        </p>
-    </div>
-</div> <!-- end semaphore -->
-
-<script src="functions.js"
-        type="text/javascript">
-</script>
-
-</body>
+    </body>
 </html>
