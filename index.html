@@ -10,25 +10,27 @@
 
     <body>
     <div class="container">
-            <div class="semaphore horizontal">
-                <div class="color red"></div>
-                <div class="color yellow"></div>
-                <div class="color green"></div>
-            </div> <!-- end semaphore -->
-
-            <div class="semaphore small">
-                <div class="color small red on"></div>
-                <div class="color small yellow on"></div>
-                <div class="color small green on"></div>
-            </div> <!-- end semaphore -->
-        <div class="semaphore horizontal">
-            <div class="color red on"></div>
+        <div class="semaphore horizontal" id="1" onclick="startLights(1, 1)">
+            <div class="color red"></div>
             <div class="color yellow"></div>
             <div class="color green"></div>
         </div> <!-- end semaphore -->
-        <div class="semaphore">
+
+        <div class="semaphore small" id="3" onclick="startLights(3, 1)">
             <div class="color red"></div>
-            <div class="color yellow on"></div>
+            <div class="color yellow"></div>
+            <div class="color green"></div>
+        </div> <!-- end semaphore -->
+
+        <div class="semaphore" id="2" onclick="startLights(2, 1)">
+            <div class="color red"></div>
+            <div class="color yellow"></div>
+            <div class="color green"></div>
+        </div> <!-- end semaphore -->
+
+        <div class="semaphore" id="4" onclick="startLights(4, 1)">
+            <div class="color red"></div>
+            <div class="color yellow"></div>
             <div class="color green"></div>
         </div> <!-- end semaphore -->
     </div>

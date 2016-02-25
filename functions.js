@@ -1,125 +1,109 @@
-var redTimeOut = 10;
-var greenTimeOut = 10;
+var redTimeOut = 30;
+var greenTimeOut = 30;
 var needStop = false;
 var secMs = 200;
 
-function lightOn(color) {
-    var light = document.getElementsByClassName(color);
-    switch (color) {
-        case 'green':
-            light[0].style.backgroundColor = "#00ff00";
-            break;
-        case 'yellow':
-            light[0].style.backgroundColor = "#ffff00";
-            break;
-        case 'red':
-            light[0].style.backgroundColor = "#ff0000";
-    }
+function lightOn(semafor, color) {
+    var light = document.getElementById(semafor).getElementsByClassName(color)[0];
+    light.className +=" on";
 }
 
-function lightOff(color) {
-    var light = document.getElementsByClassName(color);
-    switch (color) {
-        case 'green':
-            light[0].style.backgroundColor = "#003000";
-            break;
-        case 'yellow':
-            light[0].style.backgroundColor = "#303000";
-            break;
-        case 'red':
-            light[0].style.backgroundColor = "#300000";
-    }
+function lightOff(semafor, color) {
+    var light = document.getElementById(semafor).getElementsByClassName(color)[0];
+    light.className = "color " + color;
 }
 
-function intermitent(c) {
+function intermitent(semafor, c) {
     if (needStop) {
         c = 0;
     }
     switch (c) {
         case 1:
-            lightOff('green');
+            lightOff(semafor, 'green');
             setTimeout(function () {
                 intermitent(2)
             }, 0.5 * secMs);
             break;
         case 2:
-            lightOn('green');
+            lightOn(semafor, 'green');
             setTimeout(function () {
                 intermitent(1)
             }, 0.5 * secMs);
             break;
         case 0:
-            lightOff('green');
+            lightOff(semafor, 'green');
             break;
     }
 }
 
-function countdown(timer, color) {
-    var p = document.getElementsByClassName(color);
+function countdown(semafor, color, timer) {
+    var p = document.getElementById(semafor).getElementsByClassName(color)[0];
 
     if (timer > 9) {
-        p[0].innerHTML = timer;
+        p.innerHTML = timer;
     } else {
-        p[0].innerHTML = '0' + timer
+        p.innerHTML = '0' + timer
     }
     if (timer != 0) {
         timer--;
         setTimeout(function () {
-            countdown(timer, color)
+            countdown(semafor, color, timer);
         }, secMs)
     } else {
-        p[0].innerHTML = '';
+        p.innerHTML = '';
     }
 }
 
 //TODO no info about colors in js
-//TODO add classes ON and OFF
 
-function startLights(step) {
-    console.debug('step', step);
+function startLights(semafor, step) {
+    console.debug('step', step, semafor);
     switch (step) {
         case 1:
-            lightOn('red');
-            countdown(redTimeOut + 3, 'red');
+            lightOn(semafor, 'red');
+            countdown(semafor, 'red', redTimeOut + 3);
             setTimeout(function () {
-                startLights(step + 1)
+                startLights(semafor, step + 1)
             }, redTimeOut * secMs);
             break;
         case 2:
-            lightOn('yellow');
+            lightOn(semafor, 'yellow');
             setTimeout(function () {
-                startLights(step + 1)
+                startLights(semafor, step + 1)
             }, 3 * secMs);
             break;
         case 3:
-            lightOff('red');
-            lightOff('yellow');
-            lightOn('green');
-            countdown(greenTimeOut, 'green');
+            lightOff(semafor, 'red');
+            lightOff(semafor, 'yellow');
+            lightOn(semafor, 'green');
+            countdown(semafor, 'green', greenTimeOut);
             setTimeout(function () {
-                startLights(step + 1)
+                startLights(semafor, step + 1)
             }, greenTimeOut * secMs - 3 * secMs);
             break;
         case 4:
             needStop = false;
-            intermitent(1);
+            intermitent(semafor, 1);
             setTimeout(function () {
-                startLights(step + 1)
+                startLights(semafor, step + 1)
             }, 3 * secMs);
             break;
         case 5:
             needStop = true;
-            lightOn('yellow');
+            lightOn(semafor, 'yellow');
             setTimeout(function () {
-                startLights(step + 1)
+                startLights(semafor, step + 1)
             }, secMs);
             break;
         case 6:
-            lightOff('yellow');
+            lightOff(semafor, 'yellow');
             step = 1;
-            startLights(step);
+            startLights(semafor, step);
             break;
     }
 }
 
-startLights(1);
+/*
+startLights(1, 1);
+startLights(2, 1);
+startLights(3, 1);*/

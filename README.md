@@ -10,3 +10,7 @@ Preview it [here](https://rawgit.com/happyHooman/Semaphore/master/index.html)
  - [x] add led font for countdown timer
  - [x] viewport to make it look OK on mobile phones
  - [ ] user defined time for red and green lights
+ - [ ] reusable component
+ - [ ] be able to create more semafors & run any of them
+ - [ ] implement same with jquery
+ - [ ] slider to change speed

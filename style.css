@@ -1,3 +1,7 @@
+@font-face {
+    font-family: times-sqare;
+    src: url('asserts/fonts/Times_Square/TIMES_SQ.TTF');
+}
 .semaphore {
     border: solid greenyellow 2px;
     width: 120px;
@@ -20,6 +24,8 @@
     height: 34px;
     border-radius: 2px;
 }
+
+
 .container {
     border: solid blue 2px;
     margin: auto;
@@ -41,7 +47,7 @@
     line-height: 95px;
 }
 
-.color.small {
+.semaphore.small .color{
     width: 10px;
     margin: 1px;
     height: 10px;
@@ -53,10 +59,6 @@
     line-height: 9px;
 }
 
-@font-face {
-    font-family: times-sqare;
-    src: url('asserts/fonts/Times_Square/TIMES_SQ.TTF');
-}
 
 
 .green {
