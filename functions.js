@@ -1,6 +1,13 @@
 var redTimeOut = 5;
 var greenTimeOut = 10;
-var secMs = 500;
+var secMs = 600;
+
+function setSecDuration() {
+    var slider = document.getElementById("slider");
+    var output = document.getElementById("output");
+    output.innerHTML = "Second Duration = " + slider.value + " ms";
+    secMs = slider.value;
+}
 
 function lightOn(semafor, color) {
     var light = document.getElementById(semafor).getElementsByClassName(color)[0];

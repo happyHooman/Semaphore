@@ -19,6 +19,13 @@
     padding: 0px;
 }
 
+.controls {
+    background-color: darkgrey;
+    margin: 0;
+    padding: 5px;
+    border: 2px solid orangered;
+}
+
 .semaphore.small {
     border: solid greenyellow 1px;
     width: 12px;
