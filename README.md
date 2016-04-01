@@ -1,5 +1,8 @@
 # Semaphore
-Traffic light application using JavaScript
+Traffic light application using JavaScript.
+I used here some techniques, I've learned, and that are useful. Some of them are recurency and callback.
+
+Stil in development. You won't know what a semaphore will be able to do in the future :)
 
 ## Preview
 Preview it [here](https://rawgit.com/happyHooman/Semaphore/master/index.html)
@@ -13,6 +16,6 @@ Preview it [here](https://rawgit.com/happyHooman/Semaphore/master/index.html)
  - [x] be able to create more semaphores & run any of them
  - [x] make different kinds of semaphores
  - [x] remove countdown timer from small semaphores
+ - [x] slider to change speed
  - [ ] implement same with jquery
- - [ ] slider to change speed
  - [ ] user defined time for red and green lights
