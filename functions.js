@@ -108,12 +108,11 @@ function startLights(semafor, step) {
             lightOn(semafor, 'yellow');
             setTimeout(function () {
                startLights(semafor, step + 1)
-            }, .5*secMs);
+            }, secMs);
             break;
         case 4:
             lightOff(semafor, 'yellow');
             step = 1;
             startLights(semafor, step);
-            break;
     }
 }
